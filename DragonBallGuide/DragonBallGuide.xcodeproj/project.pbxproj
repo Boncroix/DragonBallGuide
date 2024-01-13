@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		421CE2E12B51D2A000CE94A0 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421CE2E02B51D2A000CE94A0 /* APIClient.swift */; };
+		421CE2E32B52567B00CE94A0 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421CE2E22B52567B00CE94A0 /* NetworkModel.swift */; };
 		4282D3F92B5108BE009B7062 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282D3F82B5108BE009B7062 /* AppDelegate.swift */; };
 		4282D3FB2B5108BE009B7062 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282D3FA2B5108BE009B7062 /* SceneDelegate.swift */; };
 		4282D4022B5108C1009B7062 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4282D4012B5108C1009B7062 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		421CE2E02B51D2A000CE94A0 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		421CE2E22B52567B00CE94A0 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		4282D3F52B5108BE009B7062 /* DragonBallGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonBallGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4282D3F82B5108BE009B7062 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4282D3FA2B5108BE009B7062 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 		4282D42C2B517326009B7062 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				421CE2E02B51D2A000CE94A0 /* APIClient.swift */,
+				421CE2E22B52567B00CE94A0 /* NetworkModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -293,6 +299,8 @@
 				4282D42A2B510A19009B7062 /* LoginViewController.swift in Sources */,
 				4282D3F92B5108BE009B7062 /* AppDelegate.swift in Sources */,
 				4282D3FB2B5108BE009B7062 /* SceneDelegate.swift in Sources */,
+				421CE2E32B52567B00CE94A0 /* NetworkModel.swift in Sources */,
+				421CE2E12B51D2A000CE94A0 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

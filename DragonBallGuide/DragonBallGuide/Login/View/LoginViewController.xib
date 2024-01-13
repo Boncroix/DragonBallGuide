@@ -11,7 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="DragonBallGuide" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicator" destination="Xvs-i3-BXr" id="18j-gR-W4F"/>
+                <outlet property="emailTextField" destination="R3Q-OO-din" id="YLh-It-sBO"/>
                 <outlet property="loginButton" destination="Gf3-y9-8fs" id="7VG-5o-TI5"/>
+                <outlet property="passwordTextField" destination="YYK-D3-T6q" id="hXw-KV-u1N"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

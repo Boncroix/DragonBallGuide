@@ -11,6 +11,11 @@ final class LoginViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    // MARK: - Model
+    private let model = NetworkModel.shared
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -32,6 +37,17 @@ final class LoginViewController: UIViewController {
         DispatchQueue.main.async {
             self.activityIndicator.startAnimating()
         }
+        model.login(
+            user: emailTextField.text ?? "",
+            password: passwordTextField.text ?? ""
+        ) { result in
+            switch result {
+                case let .success(token):
+                    print("✅ \(token)")
+                case let .failure(error):
+                    print("🔴 \(error)")
+                }
+            }
     }
 }
 
