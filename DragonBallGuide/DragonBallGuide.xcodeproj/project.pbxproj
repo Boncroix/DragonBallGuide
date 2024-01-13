@@ -11,6 +11,7 @@
 		421CE2E32B52567B00CE94A0 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421CE2E22B52567B00CE94A0 /* NetworkModel.swift */; };
 		421CE2E52B5264DF00CE94A0 /* DragonBallhero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421CE2E42B5264DF00CE94A0 /* DragonBallhero.swift */; };
 		421CE2E72B52657800CE94A0 /* HeroTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421CE2E62B52657800CE94A0 /* HeroTransformation.swift */; };
+		421CE2E92B5272C400CE94A0 /* LocalDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421CE2E82B5272C400CE94A0 /* LocalDataModel.swift */; };
 		4282D3F92B5108BE009B7062 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282D3F82B5108BE009B7062 /* AppDelegate.swift */; };
 		4282D3FB2B5108BE009B7062 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282D3FA2B5108BE009B7062 /* SceneDelegate.swift */; };
 		4282D4022B5108C1009B7062 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4282D4012B5108C1009B7062 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		421CE2E22B52567B00CE94A0 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		421CE2E42B5264DF00CE94A0 /* DragonBallhero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonBallhero.swift; sourceTree = "<group>"; };
 		421CE2E62B52657800CE94A0 /* HeroTransformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTransformation.swift; sourceTree = "<group>"; };
+		421CE2E82B5272C400CE94A0 /* LocalDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataModel.swift; sourceTree = "<group>"; };
 		4282D3F52B5108BE009B7062 /* DragonBallGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonBallGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4282D3F82B5108BE009B7062 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4282D3FA2B5108BE009B7062 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				421CE2E22B52567B00CE94A0 /* NetworkModel.swift */,
 				421CE2E42B5264DF00CE94A0 /* DragonBallhero.swift */,
 				421CE2E62B52657800CE94A0 /* HeroTransformation.swift */,
+				421CE2E82B5272C400CE94A0 /* LocalDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				4282D3FB2B5108BE009B7062 /* SceneDelegate.swift in Sources */,
 				421CE2E52B5264DF00CE94A0 /* DragonBallhero.swift in Sources */,
 				421CE2E32B52567B00CE94A0 /* NetworkModel.swift in Sources */,
+				421CE2E92B5272C400CE94A0 /* LocalDataModel.swift in Sources */,
 				421CE2E12B51D2A000CE94A0 /* APIClient.swift in Sources */,
 				421CE2E72B52657800CE94A0 /* HeroTransformation.swift in Sources */,
 			);

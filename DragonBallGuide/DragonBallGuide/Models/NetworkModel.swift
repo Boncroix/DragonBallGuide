@@ -18,6 +18,7 @@ final class NetworkModel {
     }
     
     private let client: APIClientProtocol
+
     
     private init(client: APIClientProtocol = APIClient()) {
         self.client = client
@@ -47,13 +48,14 @@ final class NetworkModel {
         urlRequest.httpMethod = "POST"
         urlRequest.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
         
-        client.jwt(urlRequest, completion: completion)
+        client.jwt(urlRequest) { result in
+            switch result {
+                case let .success(token):
+                    LocalDataModel.save(token: token)
+                    completion(.success(token))
+            case let .failure(error):
+                    completion(.failure(error))
+            }
+        }
     }
-    
-    
-    
-    
-    
-    
-    
 }

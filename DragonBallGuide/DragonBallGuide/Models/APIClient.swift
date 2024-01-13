@@ -30,15 +30,15 @@ extension DragonBallError {
         }
     }
 }
-typealias SomeModel = String
 
 // MARK: - API Client
 
 protocol APIClientProtocol {
     var session: URLSession { get }
-    func request(
+    func request<T>(
         _ request: URLRequest,
-        completion: @escaping (Result<SomeModel, DragonBallError>) -> Void
+        using type: T.Type,
+        completion: @escaping (Result<T, DragonBallError>) -> Void
     )
     func jwt(
         _ request: URLRequest,
@@ -53,9 +53,10 @@ struct APIClient: APIClientProtocol {
         self.session = session
     }
     
-    func request(
+    func request<T>(
         _ request: URLRequest,
-        completion: @escaping (Result<SomeModel, DragonBallError>) -> Void
+        using type: T.Type,
+        completion: @escaping (Result<T, DragonBallError>) -> Void
     ) {
         
     }
