@@ -10,6 +10,20 @@ import Foundation
 final class NetworkModel {
     static let shared = NetworkModel()
     
+    private var token: String? {
+        get {
+            if let token = LocalDataModel.getToken(){
+                return token
+            }
+            return nil
+        }
+        set {
+            if let token = newValue {
+                LocalDataModel.save(token: token)
+            }
+        }
+    }
+    
     private var baseComponents: URLComponents {
         var components = URLComponents()
         components.scheme = "https"
@@ -48,14 +62,41 @@ final class NetworkModel {
         urlRequest.httpMethod = "POST"
         urlRequest.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
         
-        client.jwt(urlRequest) { result in
+        client.jwt(urlRequest) { [weak self] result in
             switch result {
                 case let .success(token):
-                    LocalDataModel.save(token: token)
+                self?.token = token
                     completion(.success(token))
             case let .failure(error):
                     completion(.failure(error))
             }
         }
+    }
+    
+    func getHeroes(
+        completion: @escaping (Result<[DragonBallHero], DragonBallError>) -> Void
+    ) {
+        var components = baseComponents
+        components.path = "/api/heros/all"
+        
+        guard let url = components.url else {
+            completion(.failure(.noToken))
+            return
+        }
+        
+        guard let token else {
+            completion(.failure(.unknown))
+            return
+        }
+        
+        var urlComponents = URLComponents()
+        urlComponents.queryItems = [URLQueryItem(name: "name", value: "")]
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "POST"
+        urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        urlRequest.httpBody = urlComponents.query?.data(using: .utf8)
+        
+        client.request(urlRequest, using: [DragonBallHero].self, completion: completion)
     }
 }

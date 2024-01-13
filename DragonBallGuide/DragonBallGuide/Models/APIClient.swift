@@ -14,6 +14,7 @@ enum DragonBallError: Error {
     case statusCode(code: Int?)
     case decodingFailed
     case encodingFailed
+    case noToken
     case unknown
 }
 
@@ -25,7 +26,9 @@ extension DragonBallError {
         case 2: return .noData
         case 3: return .statusCode(code: 400)
         case 4: return .decodingFailed
-        case 5: return .unknown
+        case 5: return .encodingFailed
+        case 6: return .noToken
+        case 7: return .unknown
         default: return nil
         }
     }

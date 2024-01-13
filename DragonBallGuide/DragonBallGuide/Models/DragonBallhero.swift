@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct DragonBallHeroElement: Codable {
+struct DragonBallHero: Codable {
     let photo: String
     let name, description: String
     let favorite: Bool

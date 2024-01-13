@@ -40,14 +40,15 @@ final class LoginViewController: UIViewController {
         model.login(
             user: emailTextField.text ?? "",
             password: passwordTextField.text ?? ""
-        ) { result in
+        ) { [weak self] result in
+            guard let self else { return }
             switch result {
                 case let .success(token):
-                    print("✅ \(token)")
+                    break
                 case let .failure(error):
                     print("🔴 \(error)")
-                }
             }
+        }
     }
 }
 
