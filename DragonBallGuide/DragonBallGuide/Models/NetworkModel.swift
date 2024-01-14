@@ -80,12 +80,12 @@ final class NetworkModel {
         components.path = "/api/heros/all"
         
         guard let url = components.url else {
-            completion(.failure(.noToken))
+            completion(.failure(.malformedURL))
             return
         }
         
         guard let token else {
-            completion(.failure(.unknown))
+            completion(.failure(.noToken))
             return
         }
         

@@ -28,25 +28,35 @@ final class LoginViewController: UIViewController {
         zoomOut()
     }
     
-    @IBAction func burronToucheCancel(_ sender: Any) {
+    @IBAction func buttonTouchDown(_ sender: Any) {
         zoomIn()
     }
+    
     
     @IBAction func didTapLoginButton(_ sender: Any) {
         zoomOut()
         DispatchQueue.main.async {
             self.activityIndicator.startAnimating()
         }
+        
         model.login(
             user: emailTextField.text ?? "",
             password: passwordTextField.text ?? ""
         ) { [weak self] result in
-            guard let self else { return }
             switch result {
-                case let .success(token):
-                    break
+                case .success:
+                    DispatchQueue.main.async {
+                        let heroesListTableViewController = HeroesListTableViewController()
+                        self?.navigationController?.setViewControllers(
+                            [heroesListTableViewController], animated: true)
+                        self?.activityIndicator.stopAnimating()
+            }
                 case let .failure(error):
                     print("🔴 \(error)")
+                    DispatchQueue.main.async {
+                        self?.activityIndicator.stopAnimating()
+                        self?.invalidCredentials()
+                }
             }
         }
     }
@@ -75,5 +85,15 @@ extension LoginViewController {
         ) { [weak self] in
             self?.loginButton.transform = .identity
         }
+    }
+    
+    func invalidCredentials() {
+        let alert = UIAlertController(
+            title: "Error",
+            message: "Usuario o contraseña incorrectos",
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+        present(alert, animated: true)
     }
 }

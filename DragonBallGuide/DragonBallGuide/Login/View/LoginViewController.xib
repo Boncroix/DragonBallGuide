@@ -62,14 +62,17 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="clN-e9-i34"/>
                             </constraints>
-                            <color key="tintColor" systemColor="tintColor"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="Login">
+                                <backgroundConfiguration key="background">
+                                    <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="strokeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </backgroundConfiguration>
                                 <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="burronToucheCancel:" destination="-1" eventType="touchDown" id="hAT-j8-8wb"/>
                                 <action selector="buttonTouchCancel:" destination="-1" eventType="touchCancel" id="MJC-zk-uYA"/>
+                                <action selector="buttonTouchDown:" destination="-1" eventType="touchDown" id="fKi-7X-8aM"/>
                                 <action selector="didTapLoginButton:" destination="-1" eventType="touchUpInside" id="S4e-zt-5Bw"/>
                             </connections>
                         </button>
@@ -94,9 +97,6 @@
         <image name="fondo2" width="1080" height="1920"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
