@@ -18,32 +18,12 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Pdb-Qk-B6i">
                                 <rect key="frame" x="16" y="247" width="361" height="358"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wl7-I7-1fV">
-                                <rect key="frame" x="16" y="75" width="361" height="89.333333333333314"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="J.B.C Dragon Ball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRt-EZ-FIM">
-                                        <rect key="frame" x="55.666666666666686" y="0.0" width="250" height="40.666666666666664"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heroes Guide" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qY-ie-lx1">
-                                        <rect key="frame" x="81" y="48.666666666666671" width="199" height="40.666666666666671"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wl7-I7-1fV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="BGW-O0-qEi"/>
                             <constraint firstItem="Pdb-Qk-B6i" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Ewn-hr-Rsh"/>
-                            <constraint firstItem="wl7-I7-1fV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="GfR-yZ-B5x"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pdb-Qk-B6i" secondAttribute="trailing" constant="16" id="OFb-du-rFR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wl7-I7-1fV" secondAttribute="trailing" constant="16" id="TR4-Ub-VBA"/>
                             <constraint firstItem="Pdb-Qk-B6i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="uYb-7i-rvq"/>
                         </constraints>
                     </view>

@@ -126,9 +126,7 @@ struct APIClient: APIClientProtocol {
                 result = .failure(.noData)
                 return
             }
-            
             let statusCode = (response as? HTTPURLResponse)?.statusCode
-            
             guard statusCode == 200 else {
                 result = .failure(.statusCode(code: statusCode))
                 return

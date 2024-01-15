@@ -52,8 +52,8 @@ final class LoginViewController: UIViewController {
                         self?.activityIndicator.stopAnimating()
             }
                 case let .failure(error):
-                    print("🔴 \(error)")
                     DispatchQueue.main.async {
+                        print("🔴 \(error)")
                         self?.activityIndicator.stopAnimating()
                         self?.invalidCredentials()
                 }
@@ -90,7 +90,7 @@ extension LoginViewController {
     func invalidCredentials() {
         let alert = UIAlertController(
             title: "Error",
-            message: "Usuario o contraseña incorrectos",
+            message: "Verificación de Usuario",
             preferredStyle: .alert
         )
         alert.addAction(UIAlertAction(title: "OK", style: .cancel))
