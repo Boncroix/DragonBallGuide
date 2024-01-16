@@ -12,4 +12,5 @@ struct DragonBallHero: Codable, Hashable {
     let photo: String
     let name, description: String
     let favorite: Bool
+    let id: String
 }

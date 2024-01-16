@@ -75,12 +75,18 @@ extension HeroesListTableViewController {
             })
         }
     }
+        let hero = heroes[indexPath.row]
+        DispatchQueue.main.async {
+            let heroDetailViewController = HeroDetailViewController(hero: hero)
+            self.navigationController?.pushViewController(heroDetailViewController,animated: true)
+    
+    }
 }
     
     override func tableView(
         _ tableView: UITableView,
         heightForRowAt indexPath: IndexPath
     ) -> CGFloat {
-        200
+        180
     }
 }
