@@ -8,18 +8,22 @@
 import UIKit
 
 final class HeroDetailViewController: UIViewController {
+    
+    
+    // MARK: - Outlets
     @IBOutlet weak var heroNameLabel: UILabel!
     @IBOutlet weak var heroImageView: UIImageView!
     @IBOutlet weak var heroDescription: UITextView!
-    
-    
-    
+    @IBOutlet weak var heroTransformationsButton: UIButton!
     
     // MARK: - Model
-    private var hero: DragonBallHero
+    private var hero: DragonBallModel
+    private var transformations: [DragonBallModel] = []
+    private let model = NetworkModel.shared
+    
     
     // MARK: - Initializer
-    init(hero: DragonBallHero) {
+    init(hero: DragonBallModel) {
         self.hero = hero
         super.init(nibName: nil, bundle: nil)
     }
@@ -33,7 +37,17 @@ final class HeroDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-
+        model.getModel(path: "/api/heros/tranformations", name: "id", value: hero.id) { [weak self] result in
+            switch result {
+            case let .success(transformationsData):
+                DispatchQueue.main.async {
+                    self?.transformations = transformationsData
+                    self?.checkTransformations()
+                }
+            case let .failure(error):
+                print("⚠️ \(error)")
+            }
+        }
     }
     
     // MARK: - Configure
@@ -46,10 +60,19 @@ final class HeroDetailViewController: UIViewController {
         heroImageView.setImage(url: imageURL)
     }
     
-    // MARK: - Actions
-    @IBAction func didTapTransformations(_ sender: Any) {
+    func checkTransformations() {
+        if transformations.isEmpty {
+            heroTransformationsButton.isHidden = true
+        } else {
+            heroTransformationsButton.isHidden = false
+        }
     }
     
-    
-
+    // MARK: - Actions
+    @IBAction func didTapTransformationsButton(_ sender: Any) {
+        DispatchQueue.main.async {
+            let transformationsListTableViewController = HeroesListTableViewController()
+            self.navigationController?.pushViewController(transformationsListTableViewController, animated: true)    }
+    }
 }
+

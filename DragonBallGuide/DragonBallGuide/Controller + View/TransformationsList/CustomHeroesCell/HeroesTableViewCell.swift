@@ -17,7 +17,7 @@ final class HeroesTableViewCell: UITableViewCell {
     
     
     // MARK: - Configure
-    func configure(with hero: DragonBallHero) {
+    func configure(with hero: DragonBallModel) {
         guard let imageURL = URL(string: hero.photo) else {
             return
         }

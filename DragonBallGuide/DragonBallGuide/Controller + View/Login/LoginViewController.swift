@@ -17,7 +17,7 @@ final class LoginViewController: UIViewController {
     // MARK: - Model
     private let model = NetworkModel.shared
     
-    // MARK: - Lifecycle
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.activityIndicator.hidesWhenStopped = true
@@ -46,9 +46,9 @@ final class LoginViewController: UIViewController {
             switch result {
                 case .success:
                     DispatchQueue.main.async {
-                        let heroesListTableViewController = HeroesListTableViewController()
+                        let heroesListCollectionViewController = HeroesViewController()
                         self?.navigationController?.setViewControllers(
-                            [heroesListTableViewController], animated: true)
+                            [heroesListCollectionViewController], animated: true)
                         self?.activityIndicator.stopAnimating()
             }
                 case let .failure(error):

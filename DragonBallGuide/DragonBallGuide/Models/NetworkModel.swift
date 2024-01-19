@@ -73,11 +73,11 @@ final class NetworkModel {
         }
     }
     
-    func getHeroes(
-        completion: @escaping (Result<[DragonBallHero], DragonBallError>) -> Void
+    func getModel(path: String, name: String, value: String,
+        completion: @escaping (Result<[DragonBallModel], DragonBallError>) -> Void
     ) {
         var components = baseComponents
-        components.path = "/api/heros/all"
+        components.path = path
         
         guard let url = components.url else {
             completion(.failure(.malformedURL))
@@ -90,13 +90,15 @@ final class NetworkModel {
         }
         
         var urlComponents = URLComponents()
-        urlComponents.queryItems = [URLQueryItem(name: "name", value: "")]
+        urlComponents.queryItems = [URLQueryItem(name: name, value: value)]
         
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
         urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         urlRequest.httpBody = urlComponents.query?.data(using: .utf8)
         
-        client.request(urlRequest, using: [DragonBallHero].self, completion: completion)
+        client.request(urlRequest, using: [DragonBallModel].self, completion: completion)
     }
+    
+    
 }

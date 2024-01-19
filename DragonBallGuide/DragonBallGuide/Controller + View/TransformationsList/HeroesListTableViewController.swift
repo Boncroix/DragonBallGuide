@@ -9,11 +9,11 @@ import UIKit
 
 final class HeroesListTableViewController: UITableViewController {
     // MARK: - Type Alias
-    typealias DataSource = UITableViewDiffableDataSource<Int, DragonBallHero>
-    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, DragonBallHero>
+    typealias DataSource = UITableViewDiffableDataSource<Int, DragonBallModel>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, DragonBallModel>
     
     // MARK: - Model
-    private var heroes: [DragonBallHero] = []
+    private var heroes: [DragonBallModel] = []
     private let model = NetworkModel.shared
     private var dataSource: DataSource?
     
@@ -21,7 +21,7 @@ final class HeroesListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        model.getHeroes { [weak self] result in
+        model.getModel(path: "/api/heros/all", name: "name", value: "") { [weak self] result in
             switch result {
                 case let .success(heroesData):
                 DispatchQueue.main.async {

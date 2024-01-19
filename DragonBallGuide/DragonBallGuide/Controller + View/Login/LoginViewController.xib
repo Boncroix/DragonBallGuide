@@ -26,22 +26,23 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="yHt-Qx-BIb" userLabel="Text Field + Button">
-                    <rect key="frame" x="16" y="572" width="361" height="226"/>
+                    <rect key="frame" x="32" y="560" width="329" height="226"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="R2b-Bs-KKn" userLabel="Text Field">
-                            <rect key="frame" x="0.0" y="0.0" width="361" height="160"/>
+                            <rect key="frame" x="0.0" y="0.0" width="329" height="160"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email                                   " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R3Q-OO-din" userLabel="Email Tex Field">
-                                    <rect key="frame" x="0.0" y="0.0" width="361" height="50"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textField opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email                                   " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R3Q-OO-din" userLabel="Email Tex Field">
+                                    <rect key="frame" x="0.0" y="0.0" width="329" height="50"/>
+                                    <color key="backgroundColor" red="1" green="0.72054940460000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="rnl-w4-dZe"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                     <textInputTraits key="textInputTraits" textContentType="email"/>
                                 </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password                " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YYK-D3-T6q" userLabel="Password Text Field">
-                                    <rect key="frame" x="0.0" y="58" width="361" height="50"/>
+                                <textField opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password                " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YYK-D3-T6q" userLabel="Password Text Field">
+                                    <rect key="frame" x="0.0" y="58" width="329" height="50"/>
+                                    <color key="backgroundColor" red="1" green="0.72054940460000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="RRa-cz-B4K"/>
                                     </constraints>
@@ -49,7 +50,7 @@
                                     <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                 </textField>
                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Xvs-i3-BXr">
-                                    <rect key="frame" x="0.0" y="116" width="361" height="44"/>
+                                    <rect key="frame" x="0.0" y="116" width="329" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="ZeA-pS-sR3"/>
                                     </constraints>
@@ -58,18 +59,16 @@
                             </subviews>
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gf3-y9-8fs">
-                            <rect key="frame" x="0.0" y="176" width="361" height="50"/>
+                            <rect key="frame" x="0.0" y="176" width="329" height="50"/>
+                            <color key="backgroundColor" red="1" green="0.72054940460000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="clN-e9-i34"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Login">
-                                <backgroundConfiguration key="background">
-                                    <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="strokeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </backgroundConfiguration>
-                                <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
-                            </buttonConfiguration>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="LOGIN">
+                                <color key="titleColor" systemColor="labelColor"/>
+                            </state>
                             <connections>
                                 <action selector="buttonTouchCancel:" destination="-1" eventType="touchCancel" id="MJC-zk-uYA"/>
                                 <action selector="buttonTouchDown:" destination="-1" eventType="touchDown" id="fKi-7X-8aM"/>
@@ -84,17 +83,20 @@
             <constraints>
                 <constraint firstItem="Dub-MY-wX2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="38L-Nn-5uy"/>
                 <constraint firstAttribute="bottom" secondItem="Dub-MY-wX2" secondAttribute="bottom" id="70D-nE-O2U"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yHt-Qx-BIb" secondAttribute="bottom" constant="20" id="Giu-GQ-chR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yHt-Qx-BIb" secondAttribute="bottom" constant="32" id="Giu-GQ-chR"/>
                 <constraint firstAttribute="trailing" secondItem="Dub-MY-wX2" secondAttribute="trailing" id="IMX-kr-3Q0"/>
                 <constraint firstItem="Dub-MY-wX2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NoT-Gu-bTT"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yHt-Qx-BIb" secondAttribute="trailing" constant="16" id="REN-mz-PVf"/>
-                <constraint firstItem="yHt-Qx-BIb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="dYd-wf-Ey8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yHt-Qx-BIb" secondAttribute="trailing" constant="32" id="REN-mz-PVf"/>
+                <constraint firstItem="yHt-Qx-BIb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="dYd-wf-Ey8"/>
             </constraints>
             <point key="canvasLocation" x="119.84732824427481" y="-11.267605633802818"/>
         </view>
     </objects>
     <resources>
         <image name="fondo2" width="1080" height="1920"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
