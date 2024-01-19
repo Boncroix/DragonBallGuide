@@ -10,10 +10,11 @@ import UIKit
 final class LoginViewController: UIViewController {
     
     // MARK: - Outlets
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var loginButton: UIButton!
+    
     
     // MARK: - Model
     private let model = NetworkModel.shared
@@ -32,7 +33,6 @@ final class LoginViewController: UIViewController {
     @IBAction func buttonTouchDown(_ sender: Any) {
         zoomIn()
     }
-    
     
     @IBAction func didTapLoginButton(_ sender: Any) {
         zoomOut()
