@@ -8,6 +8,7 @@
 import UIKit
 
 final class LoginViewController: UIViewController {
+    
     // MARK: - Outlets
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!

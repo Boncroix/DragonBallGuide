@@ -41,7 +41,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lmA-bb-Kph">
                             <rect key="frame" x="0.0" y="38.333333333333314" width="393" height="676.66666666666674"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rYQ-ud-xPS">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rYQ-ud-xPS">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="338.33333333333331"/>
                                 </imageView>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wZf-zZ-r3h">
@@ -71,8 +71,8 @@
                         </button>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="0bz-82-Hqn" secondAttribute="trailing" constant="50" id="5Kh-Dn-zr0"/>
-                        <constraint firstItem="0bz-82-Hqn" firstAttribute="leading" secondItem="w0y-f4-ZKP" secondAttribute="leading" constant="50" id="bFP-or-fxV"/>
+                        <constraint firstAttribute="trailing" secondItem="lmA-bb-Kph" secondAttribute="trailing" id="Se9-hy-1Wb"/>
+                        <constraint firstItem="lmA-bb-Kph" firstAttribute="leading" secondItem="w0y-f4-ZKP" secondAttribute="leading" id="sbg-qt-43d"/>
                     </constraints>
                 </stackView>
             </subviews>

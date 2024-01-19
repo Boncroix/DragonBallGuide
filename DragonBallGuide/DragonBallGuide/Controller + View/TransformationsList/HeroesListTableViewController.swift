@@ -13,28 +13,24 @@ final class HeroesListTableViewController: UITableViewController {
     typealias Snapshot = NSDiffableDataSourceSnapshot<Int, DragonBallModel>
     
     // MARK: - Model
-    private var heroes: [DragonBallModel] = []
+    private var transformations: [DragonBallModel] = []
     private let model = NetworkModel.shared
     private var dataSource: DataSource?
+    
+    // MARK: - Initializer
+    init(transformations: [DragonBallModel]) {
+        self.transformations = transformations
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        model.getModel(path: "/api/heros/all", name: "name", value: "") { [weak self] result in
-            switch result {
-                case let .success(heroesData):
-                DispatchQueue.main.async {
-                    self?.heroes = heroesData
-                    var snapshot = Snapshot()
-                    snapshot.appendSections([0])
-                    snapshot.appendItems(heroesData)
-                    self?.dataSource?.apply(snapshot)
-                }
-                case let .failure(error):
-                    print("⚠️ \(error)")
-            }
-        }
         
         tableView.register(
             UINib(nibName: HeroesTableViewCell.identifier, bundle: nil),
@@ -42,25 +38,29 @@ final class HeroesListTableViewController: UITableViewController {
         )
         
         
-        dataSource = DataSource(tableView: tableView) { tableView, indexPath, hero in
+        dataSource = DataSource(tableView: tableView) { tableView, indexPath, transformations in
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: HeroesTableViewCell.identifier,
                 for: indexPath
             ) as? HeroesTableViewCell else {
                 return UITableViewCell()
             }
-            cell.configure(with: hero)
+            cell.configure(with: transformations)
             return cell
         }
         
         tableView.dataSource = dataSource
+        
+        var snapshot = Snapshot()
+        snapshot.appendSections([0])
+        snapshot.appendItems(transformations)
+        dataSource?.apply(snapshot)
 
     }
 }
 
 // MARK: - TableView Delegate
 extension HeroesListTableViewController {
-    
     override func tableView(
         _ tableView: UITableView,
         didSelectRowAt indexPath: IndexPath
@@ -75,7 +75,7 @@ extension HeroesListTableViewController {
             })
         }
     }
-        let hero = heroes[indexPath.row]
+        let hero = transformations[indexPath.row]
         DispatchQueue.main.async {
             let heroDetailViewController = HeroDetailViewController(hero: hero)
             self.navigationController?.pushViewController(heroDetailViewController,animated: true)

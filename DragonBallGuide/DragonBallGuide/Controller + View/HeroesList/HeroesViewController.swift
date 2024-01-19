@@ -12,7 +12,9 @@ final class HeroesViewController: UIViewController, UICollectionViewDelegate {
     typealias DataSource = UICollectionViewDiffableDataSource<Int, DragonBallModel>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Int, DragonBallModel>
     
+    // MARK: - Outlets
     @IBOutlet weak var collectionView: UICollectionView!
+    
     // MARK: - Model
     private var heroes: [DragonBallModel] = []
     private let model: NetworkModel = .shared
@@ -32,18 +34,7 @@ final class HeroesViewController: UIViewController, UICollectionViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
-        let layout = UICollectionViewFlowLayout()
-        let screenWidth = UIScreen.main.bounds.width
-        let numberOfColumns: CGFloat = (screenWidth > 600) ? 3 : 2
-        let spacing: CGFloat = 8
-        let totalSpacing = (numberOfColumns - 1) * spacing
-        let itemWidth = (screenWidth - totalSpacing) / numberOfColumns
-        
-        layout.itemSize = CGSize(width: itemWidth, height: 150)
-        layout.minimumInteritemSpacing = spacing
-        layout.minimumLineSpacing = spacing
-        collectionView.collectionViewLayout = layout
-        collectionView.backgroundColor = UIColor.redCustom
+        setUpView()
         
         let registration = UICollectionView.CellRegistration<
             HeroCollectionViewCell,
@@ -95,5 +86,23 @@ extension HeroesViewController {
                 let heroDetailViewController = HeroDetailViewController(hero: hero)
                 self.navigationController?.pushViewController(heroDetailViewController,animated: true)
         }
+    }
+}
+
+// MARK: - Configuration
+extension HeroesViewController {
+    func setUpView() {
+        let layout = UICollectionViewFlowLayout()
+        let screenWidth = UIScreen.main.bounds.width
+        let numberOfColumns: CGFloat = (screenWidth > 600) ? 3 : 2
+        let spacing: CGFloat = 8
+        let totalSpacing = (numberOfColumns - 1) * spacing
+        let itemWidth = (screenWidth - totalSpacing) / numberOfColumns
+        
+        layout.itemSize = CGSize(width: itemWidth, height: 200)
+        layout.minimumInteritemSpacing = spacing
+        layout.minimumLineSpacing = spacing
+        collectionView.collectionViewLayout = layout
+        collectionView.backgroundColor = UIColor.redCustom
     }
 }

@@ -111,7 +111,8 @@
 		422E6FAE2B53C00F00B8CE18 /* TransformationsList */ = {
 			isa = PBXGroup;
 			children = (
-				422E6FCB2B5655B200B8CE18 /* CustomHeroesCell */,
+				422E6FB92B54552B00B8CE18 /* HeroesTableViewCell.swift */,
+				422E6FBA2B54552B00B8CE18 /* HeroesTableViewCell.xib */,
 				422E6FB12B53C12500B8CE18 /* HeroesListTableViewController.swift */,
 				422E6FB22B53C12500B8CE18 /* HeroesListTableViewController.xib */,
 			);
@@ -134,15 +135,6 @@
 				422E6FF22B5A92E800B8CE18 /* HeroDetailViewController.xib */,
 			);
 			path = HeroDetail;
-			sourceTree = "<group>";
-		};
-		422E6FCB2B5655B200B8CE18 /* CustomHeroesCell */ = {
-			isa = PBXGroup;
-			children = (
-				422E6FB92B54552B00B8CE18 /* HeroesTableViewCell.swift */,
-				422E6FBA2B54552B00B8CE18 /* HeroesTableViewCell.xib */,
-			);
-			path = CustomHeroesCell;
 			sourceTree = "<group>";
 		};
 		422E6FCC2B5657C300B8CE18 /* Controller + View */ = {
