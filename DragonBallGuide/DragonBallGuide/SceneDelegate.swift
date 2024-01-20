@@ -19,10 +19,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     ) {
         guard let scene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: scene)
-        let loginViewController = LoginViewController()
         let navigationController = UINavigationController()
         navigationController.navigationBar.tintColor = UIColor.black
-        navigationController.setViewControllers([loginViewController], animated: true)
+        
+        if LocalDataModel.getToken() != nil {
+            let heroesListCollectionViewController = HeroesViewController()
+            navigationController.setViewControllers([heroesListCollectionViewController], animated: true)
+        } else {
+            let loginViewController = LoginViewController()
+            navigationController.setViewControllers([loginViewController], animated: true)
+        }
+        
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         self.window = window
