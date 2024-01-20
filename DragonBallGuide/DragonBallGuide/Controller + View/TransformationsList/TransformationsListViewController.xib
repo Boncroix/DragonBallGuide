@@ -19,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo4" translatesAutoresizingMaskIntoConstraints="NO" id="yQ7-b5-Zgi">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo3" translatesAutoresizingMaskIntoConstraints="NO" id="yQ7-b5-Zgi">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </imageView>
                 <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Kw-Ex-sFK" userLabel="Filter View">
@@ -27,7 +27,7 @@
                     <color key="backgroundColor" red="1" green="0.72054940460000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <tableView clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eBH-DW-6d6">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="separatorColor" red="1" green="0.72054940460000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
@@ -41,7 +41,7 @@
                 <constraint firstItem="1Kw-Ex-sFK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Gja-OD-JeP"/>
                 <constraint firstAttribute="bottom" secondItem="eBH-DW-6d6" secondAttribute="bottom" id="LTy-TZ-Vuh"/>
                 <constraint firstAttribute="bottom" secondItem="yQ7-b5-Zgi" secondAttribute="bottom" id="OkD-Vf-ctU"/>
-                <constraint firstItem="eBH-DW-6d6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Y09-8C-u4L"/>
+                <constraint firstItem="eBH-DW-6d6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Y09-8C-u4L"/>
                 <constraint firstItem="1Kw-Ex-sFK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="au1-Hr-sgZ"/>
                 <constraint firstAttribute="trailing" secondItem="eBH-DW-6d6" secondAttribute="trailing" id="gnS-tZ-Q2n"/>
                 <constraint firstAttribute="trailing" secondItem="yQ7-b5-Zgi" secondAttribute="trailing" id="jPj-Ao-Bap"/>
@@ -52,7 +52,7 @@
         </view>
     </objects>
     <resources>
-        <image name="fondo4" width="1116" height="1941"/>
+        <image name="fondo3" width="1080" height="1920"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

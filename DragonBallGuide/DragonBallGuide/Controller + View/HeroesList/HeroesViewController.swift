@@ -9,6 +9,7 @@ import UIKit
 
 final class HeroesViewController: UIViewController, UICollectionViewDelegate {
     
+    // MARK: - Typealias
     typealias DataSource = UICollectionViewDiffableDataSource<Int, DragonBallModel>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Int, DragonBallModel>
     
@@ -105,6 +106,6 @@ extension HeroesViewController {
         layout.minimumInteritemSpacing = spacing
         layout.minimumLineSpacing = spacing
         collectionView.collectionViewLayout = layout
-        collectionView.backgroundColor = UIColor.redCustom
+        collectionView.backgroundColor = UIColor.yellowCustom
     }
 }

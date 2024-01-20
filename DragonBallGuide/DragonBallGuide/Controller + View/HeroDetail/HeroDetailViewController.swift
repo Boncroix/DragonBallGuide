@@ -8,8 +8,7 @@
 import UIKit
 
 final class HeroDetailViewController: UIViewController {
-    
-    
+
     // MARK: - Outlets
     @IBOutlet weak var heroNameLabel: UILabel!
     @IBOutlet weak var heroImageView: UIImageView!
@@ -20,7 +19,6 @@ final class HeroDetailViewController: UIViewController {
     private var hero: DragonBallModel
     private var transformations: [DragonBallModel] = []
     private let model = NetworkModel.shared
-    
     
     // MARK: - Initializer
     init(hero: DragonBallModel) {
@@ -50,6 +48,13 @@ final class HeroDetailViewController: UIViewController {
         }
     }
     
+    // MARK: - Actions
+    @IBAction func didTapTransformationsButton(_ sender: Any) {
+        DispatchQueue.main.async {
+            let transformationsListTableViewController = TransformationsListViewController(transformations: self.transformations)
+            self.navigationController?.pushViewController(transformationsListTableViewController, animated: true)    }
+    }
+    
     // MARK: - Configure
     func configure() {
         setupNavigationBarWithLogout()
@@ -67,13 +72,6 @@ final class HeroDetailViewController: UIViewController {
         } else {
             heroTransformationsButton.isHidden = false
         }
-    }
-    
-    // MARK: - Actions
-    @IBAction func didTapTransformationsButton(_ sender: Any) {
-        DispatchQueue.main.async {
-            let transformationsListTableViewController = TransformationsListViewController(transformations: self.transformations)
-            self.navigationController?.pushViewController(transformationsListTableViewController, animated: true)    }
     }
 }
 

@@ -7,7 +7,8 @@
 
 import UIKit
 
-class TransformationsListViewController: UIViewController, UITableViewDelegate {
+final class TransformationsListViewController: UIViewController, UITableViewDelegate {
+    
     // MARK: - Type Alias
     typealias DataSource = UITableViewDiffableDataSource<Int, DragonBallModel>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Int, DragonBallModel>

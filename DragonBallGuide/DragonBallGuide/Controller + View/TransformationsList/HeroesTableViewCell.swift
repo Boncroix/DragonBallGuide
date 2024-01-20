@@ -8,15 +8,13 @@
 import UIKit
 
 final class HeroesTableViewCell: UITableViewCell {
+    
     // MARK: - Identifier
     static let identifier = "HeroesTableViewCell"
     
     // MARK: - Outlets
     @IBOutlet weak var transformationsNameLabel: UILabel!
     @IBOutlet weak var transformationsImageView: UIImageView!
-    
-    
-    
     
     // MARK: - Configure
     func configure(with hero: DragonBallModel) {

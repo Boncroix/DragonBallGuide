@@ -8,6 +8,7 @@
 import UIKit
 
 final class HeroCollectionViewCell: UICollectionViewCell {
+    
     // MARK: - Identifier
     static let identifier = "HeroCollectionViewCell"
     
