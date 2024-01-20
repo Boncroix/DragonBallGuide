@@ -31,7 +31,7 @@ final class HeroesListTableViewController: UITableViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupNavigationBarWithLogout()
         tableView.register(
             UINib(nibName: HeroesTableViewCell.identifier, bundle: nil),
             forCellReuseIdentifier: HeroesTableViewCell.identifier

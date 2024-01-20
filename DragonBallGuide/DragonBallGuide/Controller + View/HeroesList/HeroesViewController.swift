@@ -92,6 +92,8 @@ extension HeroesViewController {
 // MARK: - Configuration
 extension HeroesViewController {
     func setUpView() {
+        setupNavigationBarWithLogout()
+        
         let layout = UICollectionViewFlowLayout()
         let screenWidth = UIScreen.main.bounds.width
         let numberOfColumns: CGFloat = (screenWidth > 600) ? 3 : 2

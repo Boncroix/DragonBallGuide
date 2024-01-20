@@ -52,6 +52,7 @@ final class HeroDetailViewController: UIViewController {
     
     // MARK: - Configure
     func configure() {
+        setupNavigationBarWithLogout()
         heroNameLabel.text = hero.name
         heroDescription.text = hero.description
         guard let imageURL = URL(string: hero.photo) else {

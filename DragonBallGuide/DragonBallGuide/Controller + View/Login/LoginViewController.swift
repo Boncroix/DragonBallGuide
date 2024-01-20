@@ -23,8 +23,8 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.activityIndicator.hidesWhenStopped = true
-        
     }
+    
     // MARK: - Actions
     @IBAction func buttonTouchCancel(_ sender: Any) {
         zoomOut()

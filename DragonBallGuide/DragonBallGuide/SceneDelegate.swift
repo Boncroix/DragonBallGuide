@@ -19,12 +19,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     ) {
         guard let scene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: scene)
-        let navigationController = UINavigationController()
         let loginViewController = LoginViewController()
+        let navigationController = UINavigationController()
+        navigationController.navigationBar.tintColor = UIColor.black
         navigationController.setViewControllers([loginViewController], animated: true)
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         self.window = window
     }
 }
+
 
