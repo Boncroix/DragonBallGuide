@@ -1,16 +1,20 @@
 //
-//  HeroesListTableViewController.swift
+//  TransformationsListViewController.swift
 //  DragonBallGuide
 //
-//  Created by Jose Bueno Cruz on 14/1/24.
+//  Created by Jose Bueno Cruz on 20/1/24.
 //
 
 import UIKit
 
-final class HeroesListTableViewController: UITableViewController {
+class TransformationsListViewController: UIViewController, UITableViewDelegate {
     // MARK: - Type Alias
     typealias DataSource = UITableViewDiffableDataSource<Int, DragonBallModel>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Int, DragonBallModel>
+    
+    // MARK: - Outlets
+    @IBOutlet weak var tableView: UITableView!
+    
     
     // MARK: - Model
     private var transformations: [DragonBallModel] = []
@@ -31,6 +35,7 @@ final class HeroesListTableViewController: UITableViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
         setupNavigationBarWithLogout()
         tableView.register(
             UINib(nibName: HeroesTableViewCell.identifier, bundle: nil),
@@ -60,8 +65,8 @@ final class HeroesListTableViewController: UITableViewController {
 }
 
 // MARK: - TableView Delegate
-extension HeroesListTableViewController {
-    override func tableView(
+extension TransformationsListViewController {
+    func tableView(
         _ tableView: UITableView,
         didSelectRowAt indexPath: IndexPath
     ) {
@@ -83,10 +88,10 @@ extension HeroesListTableViewController {
     }
 }
     
-    override func tableView(
+    func tableView(
         _ tableView: UITableView,
         heightForRowAt indexPath: IndexPath
     ) -> CGFloat {
-        180
+        160
     }
 }

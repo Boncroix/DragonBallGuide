@@ -12,15 +12,18 @@ final class HeroesTableViewCell: UITableViewCell {
     static let identifier = "HeroesTableViewCell"
     
     // MARK: - Outlets
-    @IBOutlet weak var heroImageView: UIImageView!
+    @IBOutlet weak var transformationsNameLabel: UILabel!
+    @IBOutlet weak var transformationsImageView: UIImageView!
+    
     
     
     
     // MARK: - Configure
     func configure(with hero: DragonBallModel) {
+        transformationsNameLabel.text = hero.name
         guard let imageURL = URL(string: hero.photo) else {
             return
         }
-        heroImageView.setImage(url: imageURL)
+        transformationsImageView.setImage(url: imageURL)
     }
 }

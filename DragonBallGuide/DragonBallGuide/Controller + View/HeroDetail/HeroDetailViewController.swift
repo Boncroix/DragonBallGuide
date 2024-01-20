@@ -72,7 +72,7 @@ final class HeroDetailViewController: UIViewController {
     // MARK: - Actions
     @IBAction func didTapTransformationsButton(_ sender: Any) {
         DispatchQueue.main.async {
-            let transformationsListTableViewController = HeroesListTableViewController(transformations: self.transformations)
+            let transformationsListTableViewController = TransformationsListViewController(transformations: self.transformations)
             self.navigationController?.pushViewController(transformationsListTableViewController, animated: true)    }
     }
 }

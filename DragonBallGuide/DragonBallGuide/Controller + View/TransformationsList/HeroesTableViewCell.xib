@@ -9,29 +9,50 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="245" id="KGk-i7-Jjw" customClass="HeroesTableViewCell" customModule="DragonBallGuide" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="562" height="245"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="180" id="KGk-i7-Jjw" customClass="HeroesTableViewCell" customModule="DragonBallGuide" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="318" height="180"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="562" height="245"/>
+                <rect key="frame" x="0.0" y="0.0" width="318" height="180"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B1S-vy-zDc">
-                        <rect key="frame" x="0.0" y="2" width="562" height="241"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9E4-dP-FVR">
+                        <rect key="frame" x="0.0" y="0.0" width="318" height="180"/>
                     </imageView>
+                    <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XBU-tF-UXU">
+                        <rect key="frame" x="0.0" y="150" width="318" height="30"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvr-97-Zn2">
+                                <rect key="frame" x="135.66666666666666" y="4" width="47" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.72054940460000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qvr-97-Zn2" firstAttribute="centerY" secondItem="XBU-tF-UXU" secondAttribute="centerY" id="EUZ-Pb-fea"/>
+                            <constraint firstAttribute="height" constant="30" id="IHP-Rl-BZK"/>
+                            <constraint firstItem="qvr-97-Zn2" firstAttribute="centerX" secondItem="XBU-tF-UXU" secondAttribute="centerX" id="w9l-Ko-8E0"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="B1S-vy-zDc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="19J-nE-HPR"/>
-                    <constraint firstAttribute="bottom" secondItem="B1S-vy-zDc" secondAttribute="bottom" constant="2" id="4Sp-3V-KTu"/>
-                    <constraint firstAttribute="trailing" secondItem="B1S-vy-zDc" secondAttribute="trailing" id="XIc-d7-QN9"/>
-                    <constraint firstItem="B1S-vy-zDc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="g8p-DR-bki"/>
+                    <constraint firstAttribute="bottom" secondItem="XBU-tF-UXU" secondAttribute="bottom" id="1PZ-iB-N6A"/>
+                    <constraint firstAttribute="bottom" secondItem="9E4-dP-FVR" secondAttribute="bottom" id="61T-Mv-Os8"/>
+                    <constraint firstAttribute="trailing" secondItem="XBU-tF-UXU" secondAttribute="trailing" id="DPa-vx-Srl"/>
+                    <constraint firstItem="9E4-dP-FVR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="PY9-Fn-Ay6"/>
+                    <constraint firstItem="XBU-tF-UXU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="r0P-sb-N6f"/>
+                    <constraint firstItem="9E4-dP-FVR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="uhn-7z-sp8"/>
+                    <constraint firstAttribute="trailing" secondItem="9E4-dP-FVR" secondAttribute="trailing" id="yWK-Gz-zdo"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="heroImageView" destination="B1S-vy-zDc" id="gsA-rI-e3m"/>
+                <outlet property="transformationsImageView" destination="9E4-dP-FVR" id="Cb5-mS-7Ia"/>
+                <outlet property="transformationsNameLabel" destination="qvr-97-Zn2" id="JJK-9h-pZj"/>
             </connections>
-            <point key="canvasLocation" x="350.23255813953489" y="-136.1587982832618"/>
+            <point key="canvasLocation" x="178.6046511627907" y="-157.08154506437768"/>
         </tableViewCell>
     </objects>
 </document>
