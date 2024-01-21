@@ -24,11 +24,12 @@
 		422E6FF92B5B9DAC00B8CE18 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422E6FF82B5B9DAC00B8CE18 /* UIViewController.swift */; };
 		422E6FFC2B5BE2A400B8CE18 /* TransformationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422E6FFA2B5BE2A400B8CE18 /* TransformationsListViewController.swift */; };
 		422E6FFD2B5BE2A400B8CE18 /* TransformationsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 422E6FFB2B5BE2A400B8CE18 /* TransformationsListViewController.xib */; };
+		422E70012B5C569D00B8CE18 /* NetwortkModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422E70002B5C569D00B8CE18 /* NetwortkModelTests.swift */; };
+		422E70042B5CF7A000B8CE18 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422E70032B5CF7A000B8CE18 /* MockURLProtocol.swift */; };
 		4282D3F92B5108BE009B7062 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282D3F82B5108BE009B7062 /* AppDelegate.swift */; };
 		4282D3FB2B5108BE009B7062 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282D3FA2B5108BE009B7062 /* SceneDelegate.swift */; };
 		4282D4022B5108C1009B7062 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4282D4012B5108C1009B7062 /* Assets.xcassets */; };
 		4282D4052B5108C1009B7062 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282D4032B5108C1009B7062 /* LaunchScreen.storyboard */; };
-		4282D4102B5108C1009B7062 /* DragonBallGuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282D40F2B5108C1009B7062 /* DragonBallGuideTests.swift */; };
 		4282D41A2B5108C2009B7062 /* DragonBallGuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282D4192B5108C2009B7062 /* DragonBallGuideUITests.swift */; };
 		4282D41C2B5108C2009B7062 /* DragonBallGuideUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282D41B2B5108C2009B7062 /* DragonBallGuideUITestsLaunchTests.swift */; };
 		4282D42A2B510A19009B7062 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282D4282B510A19009B7062 /* LoginViewController.swift */; };
@@ -70,6 +71,8 @@
 		422E6FF82B5B9DAC00B8CE18 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		422E6FFA2B5BE2A400B8CE18 /* TransformationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationsListViewController.swift; sourceTree = "<group>"; };
 		422E6FFB2B5BE2A400B8CE18 /* TransformationsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransformationsListViewController.xib; sourceTree = "<group>"; };
+		422E70002B5C569D00B8CE18 /* NetwortkModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetwortkModelTests.swift; sourceTree = "<group>"; };
+		422E70032B5CF7A000B8CE18 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		4282D3F52B5108BE009B7062 /* DragonBallGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonBallGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4282D3F82B5108BE009B7062 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4282D3FA2B5108BE009B7062 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,7 +80,6 @@
 		4282D4042B5108C1009B7062 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4282D4062B5108C1009B7062 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4282D40B2B5108C1009B7062 /* DragonBallGuideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragonBallGuideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4282D40F2B5108C1009B7062 /* DragonBallGuideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonBallGuideTests.swift; sourceTree = "<group>"; };
 		4282D4152B5108C2009B7062 /* DragonBallGuideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragonBallGuideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4282D4192B5108C2009B7062 /* DragonBallGuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonBallGuideUITests.swift; sourceTree = "<group>"; };
 		4282D41B2B5108C2009B7062 /* DragonBallGuideUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonBallGuideUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -162,6 +164,14 @@
 			path = HeroesList;
 			sourceTree = "<group>";
 		};
+		422E70022B5CF76600B8CE18 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				422E70032B5CF7A000B8CE18 /* MockURLProtocol.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		4282D3EC2B5108BE009B7062 = {
 			isa = PBXGroup;
 			children = (
@@ -200,7 +210,8 @@
 		4282D40E2B5108C1009B7062 /* DragonBallGuideTests */ = {
 			isa = PBXGroup;
 			children = (
-				4282D40F2B5108C1009B7062 /* DragonBallGuideTests.swift */,
+				422E70022B5CF76600B8CE18 /* Helpers */,
+				422E70002B5C569D00B8CE18 /* NetwortkModelTests.swift */,
 			);
 			path = DragonBallGuideTests;
 			sourceTree = "<group>";
@@ -392,7 +403,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4282D4102B5108C1009B7062 /* DragonBallGuideTests.swift in Sources */,
+				422E70042B5CF7A000B8CE18 /* MockURLProtocol.swift in Sources */,
+				422E70012B5C569D00B8CE18 /* NetwortkModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

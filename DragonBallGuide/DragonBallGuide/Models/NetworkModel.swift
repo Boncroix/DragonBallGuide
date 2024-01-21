@@ -34,7 +34,7 @@ final class NetworkModel {
     private let client: APIClientProtocol
 
     
-    private init(client: APIClientProtocol = APIClient()) {
+    init(client: APIClientProtocol = APIClient()) {
         self.client = client
     }
     
@@ -99,6 +99,4 @@ final class NetworkModel {
         
         client.request(urlRequest, using: [DragonBallModel].self, completion: completion)
     }
-    
-    
 }

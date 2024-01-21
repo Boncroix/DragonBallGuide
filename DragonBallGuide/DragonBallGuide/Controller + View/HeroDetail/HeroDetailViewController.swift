@@ -38,8 +38,14 @@ final class HeroDetailViewController: UIViewController {
         model.getModel(path: "/api/heros/tranformations", name: "id", value: hero.id) { [weak self] result in
             switch result {
             case let .success(transformationsData):
+                var custonListTransformationsData = transformationsData
+                custonListTransformationsData.sort {
+                    let numero1 = Int($0.name.components(separatedBy: ".").first ?? "") ?? 0
+                    let numero2 = Int($1.name.components(separatedBy: ".").first ?? "") ?? 0
+                    return numero1 < numero2
+                }
                 DispatchQueue.main.async {
-                    self?.transformations = transformationsData
+                    self?.transformations = custonListTransformationsData
                     self?.checkTransformations()
                 }
             case let .failure(error):

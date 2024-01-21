@@ -63,10 +63,12 @@ final class HeroesViewController: UIViewController, UICollectionViewDelegate {
             switch result {
                 case let .success(heroesData):
                     DispatchQueue.main.async {
-                        self?.heroes = heroesData
+                        var custonListHeroesData = heroesData
+                        custonListHeroesData.removeAll { $0.name == "Quake (Daisy Johnson)"}
+                        self?.heroes = custonListHeroesData
                         var snapshot = Snapshot()
                         snapshot.appendSections([0])
-                        snapshot.appendItems(heroesData)
+                        snapshot.appendItems(custonListHeroesData)
                         self?.dataSource?.apply(snapshot)
                 }
                 case let .failure(error):
